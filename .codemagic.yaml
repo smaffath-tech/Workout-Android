@@ -1,0 +1,14 @@
+workflows:
+  android-release:
+    name: Android AAB Release
+    environment:
+      # Use a robust build environment
+      android: 
+        gradle: 8.4
+        jdk: 17
+    scripts:
+      - name: Build Android App Bundle (AAB)
+        script: |
+          ./gradlew bundleRelease
+    artifacts:
+      - app/build/outputs/bundle/**/*.aab
