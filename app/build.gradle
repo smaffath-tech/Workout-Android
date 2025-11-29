@@ -1,0 +1,87 @@
+// The plugins block is mandatory and should be at the top of the file.
+plugins {
+    // Standard Android application plugin
+    id 'com.android.application'
+
+    // Kotlin Android plugin
+    id 'org.jetbrains.kotlin.android'
+}
+
+// The android block contains all the core settings for the app module.
+android {
+    // This is the base package name for your code.
+    namespace 'com.sma.workoutapp'
+
+    // Configuration for compiling the SDK
+    compileSdk 34 // Use the latest stable SDK version
+
+    defaultConfig {
+        // This is the unique ID for the Google Play Store.
+        applicationId 'com.sma.workoutapp'
+
+        // Minimum SDK version your app supports
+        minSdk 24
+
+        // Target SDK version your app is tested against
+        targetSdk 34
+
+        // Versioning for the app
+        versionCode 1
+        versionName "1.0"
+
+        // Use JUnit as the test runner
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    // Configuration for build types (e.g., release, debug)
+    buildTypes {
+        release {
+            // Do not display log messages and remove unused resources in release builds
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            // Debug configuration usually leaves things verbose
+        }
+    }
+
+    // Configure Java/Kotlin compatibility
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    // Configure Kotlin compilation (if using the standard Kotlin plugin)
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    // Enable the View Binding feature (useful for easily referencing UI elements)
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+// The dependencies block lists all external libraries used by this module.
+dependencies {
+    // --- AndroidX UI & Core ---
+
+    // Core utilities for Kotlin
+    implementation 'androidx.core:core-ktx:1.12.0'
+    // Compatibility library for UI components
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    // Material Design library for UI
+    implementation 'com.google.android.material:material:1.11.0'
+    // Constraint Layout for flexible UI building
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    // --- Testing Dependencies ---
+
+    // Standard JUnit 4 for local unit tests
+    testImplementation 'junit:junit:4.13.2'
+
+    // AndroidX JUnit for instrumented tests (on device/emulator)
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    // Espresso for UI testing
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}
