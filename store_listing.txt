@@ -1,0 +1,19 @@
+App Title: MyChestApp — 7-Day Chest Focus (Stylish Home Workouts)
+Short description (max 80 chars):
+Stylish home workout planner: 7-day chest plan, timers, editable routines.
+
+Full description:
+MyChestApp helps you build chest and overall strength with a focused 7-day plan. Features:
+- Day-by-day workouts with sets & reps
+- Editable workouts: add/remove exercises, change sets/reps
+- Timers and rest timers that auto-switch between rest/work
+- Weekly calendar and analytics to track progress
+- Offline-first: data stored locally
+- Progress persistence and history export (local)
+
+Category: Health & Fitness
+Content rating: Everyone
+Privacy policy URL: <your-hosted-privacy-policy-URL>
+Contact email: support@mychestapp.example
+What's new (short):
+- Add editable workouts, weekly calendar, analytics, and timers.
