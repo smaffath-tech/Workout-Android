@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        The namespace must match the 'namespace' property set in your build.gradle file.
+        This defines the base package for all your app's code and resources.
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.WorkoutAndroid">
+        <!--
+            This is the main entry point of your application.
+            All Android apps must have at least one Activity defined.
+        -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <!-- This category makes the activity appear in the device's launcher screen. -->
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+            You would add other application components here as you develop the app,
+            such as services, broadcast receivers, or other activities.
+        -->
+
+    </application>
+</manifest>
